@@ -9,23 +9,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent
 
 # Static Classes
 classes = [
-    "Arabic",
-    "Danish",
-    "Dutch",
-    "English",
-    "French",
-    "German",
-    "Greek",
-    "Hindi",
-    "Italian",
-    "Kannada",
-    "Malayalam",
-    "Portugeese",
-    "Russian",
-    "Spanish",
-    "Sweedish",
-    "Tamil",
-    "Turkish",
+    'Arabic', 'Chinese', 'Dutch', 'English', 'Estonian', 'French',
+    'Hindi', 'Indonesian', 'Japanese', 'Korean', 'Latin', 'Persian',
+    'Portugese', 'Pushto', 'Romanian', 'Russian', 'Spanish', 'Swedish',
+    'Tamil', 'Thai', 'Turkish', 'Urdu'
 ]
 
 
