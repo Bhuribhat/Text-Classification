@@ -8,4 +8,3 @@ services:
     ports:
       - 80:80
     container_name: my-language-app
-    command: sh -c "echo 'localhost:80'"
