@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from model.detection_model import predict_pipeline
@@ -26,9 +27,19 @@ def home(request: Request):
 @app.post("/predict", response_model=PredictionOut)
 def predict(request: Request, payload: TextIn):
     language = predict_pipeline(payload.text)
-    return templates.TemplateResponse("index.html", {"request": request, "language": language})
+    return {"language": language}
 
 
-# if __name__ == "__main__":
-#     import uvicorn
-#     uvicorn.run(app, host="0.0.0.0", port=8000)
+@app.route("/detect", methods=["GET", "POST"])
+async def detect(request: Request, payload: TextIn = None):
+    if request.method == "POST" and payload is not None:
+        language = predict_pipeline(payload.text)
+        return templates.TemplateResponse("index.html", {"request": request, "language": language})
+    else:
+        return templates.TemplateResponse("index.html", {"request": request, "language": "None"}, media_type="text/html")
+
+
+# uvicorn main:app --reload
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -8,10 +8,10 @@
     <h1>Text Detection</h1>
     <div class="container">
         <h2>Text Input</h2>
-        <form action="{{ url_for('predict') }}" method="post">
+        <form id="textForm">
             <label for="text">Enter text:</label>
             <textarea id="text" name="text" rows="4" cols="50"></textarea>
-            <button type="submit">Detect Language</button>
+            <button type="button" onclick="submitText()">Detect Language</button>
         </form>
         {% if language %}
         <div class="result">
@@ -20,5 +20,44 @@
         </div>
         {% endif %}
     </div>
+    <script>
+        function submitText() {
+            const textArea = document.getElementById('text');
+            const text = textArea.value;
+            console.log(text);
+
+            // Serialize the input as JSON
+            const payload = JSON.stringify({ 'text': text });
+
+            // Create a new request
+            const xhr = new XMLHttpRequest();
+
+            // Set the request URL and method
+            xhr.open('POST', '/predict');
+
+            // Set the request headers
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            // Define the callback function when the request completes
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    // Update the result element
+                    const result = document.querySelector('.result');
+                    if (result) {
+                        result.innerHTML = `
+                            <h3>Prediction:</h3>
+                            <p>Detected language: ${response.language}</p>
+                        `;
+                    }
+                } else {
+                    console.error(xhr.status);
+                }
+            };
+
+            // Send the request with the serialized payload
+            xhr.send(payload);
+        }
+    </script>
 </body>
 </html>
