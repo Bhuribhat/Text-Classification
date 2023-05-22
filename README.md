@@ -44,3 +44,4 @@ Click `Try it out` to try your text value in documentation:
 
 - [Language Detection](https://github.com/AssemblyAI-Examples/ml-fastapi-docker-heroku)
 - [Text Classification](https://github.com/patrickloeber/ml-deployment/blob/main/docker-flask/ml-dev/text-classification.ipynb)
+- [LSTM text Classification](https://www.kaggle.com/code/arunrk7/nlp-beginner-text-classification-using-lstm)
