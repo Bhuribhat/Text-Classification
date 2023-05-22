@@ -1,5 +1,9 @@
 ﻿# Text Classification
 
+### Dataset
+
+- [Language Detection Dataset](https://www.kaggle.com/datasets/basilb2s/language-detection)
+- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140)
 
 ## Description
 
@@ -61,7 +65,7 @@ Click `Try it out` to try custom text value in documentation:
 - [LSTM text Classification](https://www.kaggle.com/code/arunrk7/nlp-beginner-text-classification-using-lstm)
 
 
-## Dataset
+<!-- ## Dataset
 
 - [Language Detection Dataset](https://www.kaggle.com/datasets/basilb2s/language-detection)
-- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140)
+- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) -->
