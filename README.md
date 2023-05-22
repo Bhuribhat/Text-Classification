@@ -3,11 +3,17 @@
 
 ## Dataset
 
-- Language Detection Dataset [link](https://www.kaggle.com/datasets/basilb2s/language-detection)
-- Text Classification Dataset [link](https://www.kaggle.com/datasets/kazanova/sentiment140)
+- Language Detection Dataset ([link](https://www.kaggle.com/datasets/basilb2s/language-detection))
+- Text Classification Dataset ([link](https://www.kaggle.com/datasets/kazanova/sentiment140))
 
 
 ## Run Application
+
+
+```sh
+>> cd ./app
+>> uvicorn main:app --reload
+```
 
 <!-- - The webserver is available at: `http://localhost:80` -->
 - The webserver is available at: `http://localhost:8000`  
@@ -26,12 +32,6 @@ Use docker-compose:
 >> docker-compose up -d    # start container
 >> docker-compose down     # stop container
 ``` -->
-
-
-```sh
->> cd ./app
->> uvicorn main:app --reload
-```
 
 Click `Try it out` to try your text value in documentation:  
 

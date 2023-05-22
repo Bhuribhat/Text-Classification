@@ -5,3 +5,4 @@ __pycache__/
 
 # Temp-files
 app/model/old_detection_model.pkl
+app/data/dataset.csv
