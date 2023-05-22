@@ -1,14 +1,18 @@
 ﻿# Text Classification
 
 
-## Dataset
+## Description
 
-- Language Detection Dataset ([link](https://www.kaggle.com/datasets/basilb2s/language-detection))
-- Text Classification Dataset ([link](https://www.kaggle.com/datasets/kazanova/sentiment140))
+This web page provides a user-friendly interface for text detection and classification. Users can enter text, and with the click of a button, the language of the text is detected and displayed. If the language is English, users have the option to classify the text as positive or negative.  
+
+- The __"Detect"__ button is used to trigger the language detection process.
+- The __"Classify"__ button is enabled if the language is English; otherwise, it remains disabled.
 
 
 ## Run Application
 
+- The webserver is available at: `http://localhost:8000`  
+- Documentation is available at: `http://localhost:8000/docs`
 
 ```sh
 >> cd ./app
@@ -16,10 +20,6 @@
 ```
 
 <!-- - The webserver is available at: `http://localhost:80` -->
-- The webserver is available at: `http://localhost:8000`  
-- Documentation is available at: `http://localhost:8000/docs`
-
-
 <!-- Build container from Dockerfile:  
 
 ```sh
@@ -33,15 +33,35 @@ Use docker-compose:
 >> docker-compose down     # stop container
 ``` -->
 
-Click `Try it out` to try your text value in documentation:  
+
+### Webserver UI
+
+The webserver UI is available at: `http://localhost:8000/detect`  
+
+<p align="left">
+    <img src="./assets/webui1.png" height="400" />
+    <img src="./assets/webui2.png" height="400" />
+</p>
+
+
+### Documentation
+
+Click `Try it out` to try custom text value in documentation:  
 
 <p align="left">
     <img src="./assets/fastapi1.png" height="400" />
     <img src="./assets/fastapi2.png" height="400" />
 </p>
 
+
 ## Resource
 
 - [Language Detection](https://github.com/AssemblyAI-Examples/ml-fastapi-docker-heroku)
 - [Text Classification](https://github.com/patrickloeber/ml-deployment/blob/main/docker-flask/ml-dev/text-classification.ipynb)
 - [LSTM text Classification](https://www.kaggle.com/code/arunrk7/nlp-beginner-text-classification-using-lstm)
+
+
+## Dataset
+
+- [Language Detection Dataset](https://www.kaggle.com/datasets/basilb2s/language-detection)
+- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140)

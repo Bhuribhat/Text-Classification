@@ -12,7 +12,7 @@
             <label for="text">Enter text:</label>
             <textarea id="text" name="text" rows="4" cols="50"></textarea>
             <button type="button" onclick="submitText()">Detect</button>
-            <button type="button" onclick="classifyText()">Classify</button>
+            <button type="button" onclick="classifyText()" id="classifyButton" disabled>Classify</button>
         </form>
 
         <div class="result">
@@ -56,6 +56,14 @@
                             <h3>Detected Language:</h3>
                             <p>${response.language}</p>
                         `;
+
+                        // Enable or disable the classify button based on the language
+                        const classifyButton = document.getElementById('classifyButton');
+                        if (response.language === 'English') {
+                            classifyButton.disabled = false;
+                        } else {
+                            classifyButton.disabled = true;
+                        }
                     }
                 } else {
                     console.error(xhr.status);
