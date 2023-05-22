@@ -2,7 +2,7 @@ import csv
 
 # Specify the input and output file paths
 input_file = 'dataset.csv'
-output_file = 'Text_Classification_Update.csv'
+output_file = 'Text_Classification.csv'
 
 # Specify the row numbers to extract
 rows_to_extract = set(range(1, 100_001)) | set(range(800_001, 900_001))
