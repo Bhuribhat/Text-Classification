@@ -1,5 +1,9 @@
-﻿# Text Classification
+﻿﻿# Text Classification
 
+### Dataset
+
+- [Language Detection Dataset](https://www.kaggle.com/datasets/basilb2s/language-detection)
+- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140)
 
 ## Description
 
@@ -8,19 +12,6 @@ This web page provides a user-friendly interface for text detection and classifi
 - The __"Detect"__ button is used to trigger the language detection process.
 - The __"Classify"__ button is enabled if the language is English; otherwise, it remains disabled.
 
-
-## Create Docker Container
-
-In /app/main.py, add `app` in both _from app.model import ..._  
-
-- The webserver is available at: `http://localhost:80`
-- Documentation is available at: `http://localhost:80/docs`
-
-<!-- docker-compose up --build  # build image and run container -->
-```sh
->> docker build -t text-classify .      # builde image
->> docker run -p 80:80 text-classify    # run container
-```
 
 ## Run Application
 
@@ -32,7 +23,13 @@ In /app/main.py, add `app` in both _from app.model import ..._
 >> uvicorn main:app --reload
 ```
 
-<!--
+<!-- - The webserver is available at: `http://localhost:80` -->
+<!-- Build container from Dockerfile:  
+
+```sh
+>> docker-compose up --build  # build image and run container
+```
+
 Use docker-compose:  
 
 ```sh
@@ -43,7 +40,7 @@ Use docker-compose:
 
 ### Webserver UI
 
-The webserver UI is available at: `http://localhost:80/detect`  
+The webserver UI is available at: `http://localhost:8000/detect`  
 
 <p align="left">
     <img src="./assets/webui1.png" height="400" />
@@ -68,7 +65,7 @@ Click `Try it out` to try custom text value in documentation:
 - [LSTM text Classification](https://www.kaggle.com/code/arunrk7/nlp-beginner-text-classification-using-lstm)
 
 
-## Dataset
+<!-- ## Dataset
 
 - [Language Detection Dataset](https://www.kaggle.com/datasets/basilb2s/language-detection)
-- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140)
+- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) -->
