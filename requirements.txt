@@ -1,1 +1,4 @@
 scikit-learn==1.0.2
+tensorflow==2.11.0
+fastapi==0.89.1
+pandas==1.4.2
