@@ -1,12 +1,6 @@
 ﻿# Text Classification
 
 
-## Dataset
-
-- [Language Detection Dataset](https://www.kaggle.com/datasets/basilb2s/language-detection)
-- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140)
-
-
 ## Description
 
 This web page provides a user-friendly interface for text detection and classification. Users can enter text, and with the click of a button, the language of the text is detected and displayed. If the language is English, users have the option to classify the text as positive or negative.  
@@ -15,17 +9,30 @@ This web page provides a user-friendly interface for text detection and classifi
 - The __"Classify"__ button is enabled if the language is English; otherwise, it remains disabled.
 
 
+## Dataset
+
+- [Language Detection Dataset](https://www.kaggle.com/datasets/basilb2s/language-detection)
+- [Text Classification Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140)
+
+
 ## Create Docker Container
 
-In /app/main.py, add `app` in both _from app.model import ..._  
+In /app/main.py, add `app` in both `from app.model import ...`  
 
 - The webserver is available at: `http://localhost:80`
 - Documentation is available at: `http://localhost:80/docs`
 
-<!-- docker-compose up --build  # build image and run container -->
 ```sh
 >> docker build -t text-classify .      # builde image
 >> docker run -p 80:80 text-classify    # run container
+```
+
+Use docker-compose:  
+
+```sh
+>> docker-compose up --build    # build image and run container
+>> docker-compose up -d         # start and run container
+>> docker-compose down          # stop and remove container
 ```
 
 ## Run Application
@@ -37,14 +44,6 @@ In /app/main.py, add `app` in both _from app.model import ..._
 >> cd ./app
 >> uvicorn main:app --reload
 ```
-
-<!--
-Use docker-compose:  
-
-```sh
->> docker-compose up -d    # start container
->> docker-compose down     # stop container
-``` -->
 
 
 ### Webserver UI
