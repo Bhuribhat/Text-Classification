@@ -6,11 +6,13 @@
 </head>
 <body>
     <h1>Text Detector</h1>
+    <div style="display: flex; justify-content: center;">
+        <img alt="image" src="/static/image.png" style="max-width: 200px; max-height: 200px;">
+    </div>
     <div class="container">
-        <h2>Text Input</h2>
+        <h2>Enter text:</h2>
         <form id="textForm">
-            <label for="text">Enter text:</label>
-            <textarea id="text" name="text" rows="4" cols="50"></textarea>
+            <textarea id="text" name="text" rows="4"></textarea>
             <button type="button" onclick="submitText()">Detect</button>
             <button type="button" onclick="classifyText()" id="classifyButton" disabled>Classify</button>
         </form>
