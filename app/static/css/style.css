@@ -3,7 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(135deg, #2c3e50, #c396e0);
+    background: linear-gradient(135deg, #111827, #c396e0);
     color: #fff;
     overflow: hidden;
 }
@@ -18,9 +18,10 @@ h1 {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #555;
+    border: 1px solid #2a333b;
+    border-radius: 20px;
     padding: 20px;
-    background-color: #333;
+    background-color: #111827;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -36,19 +37,19 @@ label {
 
 textarea {
     width: 97%;
-    height: 150px;
+    height: 120px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #555;
+    border: 1px solid #2a333b;
     border-radius: 4px;
-    resize: vertical;
-    background-color: #444;
+    resize: none;
+    background-color: #111827a2;
     color: #fff;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #555;
+    background-color: #6365f1d2;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -57,21 +58,25 @@ button {
 }
 
 button:hover {
-    background-color: #777;
+    background-color: #7c82f4;
 }
 
 button:disabled {
-    background-color: #888;
+    background-color: #1f2937;
     cursor: not-allowed;
 }
 
 .result {
     margin-top: 20px;
-    border-top: 1px solid #555;
+    border-top: 1px solid #2a333b;
     padding-top: 10px;
 }
 
 .result h3 {
     margin-top: 0;
     color: #fff;
+}
+
+p {
+    color: #45515c;
 }

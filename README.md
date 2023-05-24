@@ -51,8 +51,7 @@ Use docker-compose:
 The webserver UI is available at: `http://localhost:8000/detect`  
 
 <p align="left">
-    <img src="./assets/webui1.png" height="400" />
-    <img src="./assets/webui2.png" height="400" />
+    <img src="./assets/webui.png" height="400" />
 </p>
 
 

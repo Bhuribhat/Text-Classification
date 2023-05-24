@@ -85,3 +85,9 @@ function classifyText() {
     // Send the request with the serialized payload
     xhr.send(payload);
 };
+
+
+function changeTheme(theme) {
+    const themeLink = document.getElementById('theme-link');
+    themeLink.href = `/static/css/${theme}.css`;
+}
