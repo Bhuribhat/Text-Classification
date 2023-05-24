@@ -17,7 +17,7 @@ This web page provides a user-friendly interface for text detection and classifi
 
 ## Create Docker Container
 
-In /app/main.py, add `app` in both `from app.model import ...`  
+> __Note:__ In order to use docker, you need to add `app` in /app/main.py in both `from app.model import ...`  
 
 - The webserver is available at: `http://localhost:80`
 - Documentation is available at: `http://localhost:80/docs`
