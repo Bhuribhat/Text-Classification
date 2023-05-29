@@ -23,7 +23,7 @@ This web page provides a user-friendly interface for text detection and classifi
 - Documentation is available at: `http://localhost:80/docs`
 
 ```sh
->> docker build -t text-classify .      # builde image
+>> docker build -t text-classify .      # build image
 >> docker run -p 80:80 text-classify    # run container
 ```
 
