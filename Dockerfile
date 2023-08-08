@@ -1,7 +1,10 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
 
-COPY ./requirements.txt /app/requirements.txt
+WORKDIR /app
 
-RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+COPY ./requirements.txt ./
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-COPY ./app /app/app
+COPY ./app ./app
+
+# CMD ["unicorn", "app.main:app", "--reload"]

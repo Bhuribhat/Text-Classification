@@ -17,14 +17,12 @@ This web page provides a user-friendly interface for text detection and classifi
 
 ## Create Docker Container
 
-> __Note:__ In order to use docker, you need to add `app` in /app/main.py in both `from app.model import ...`  
-
 - The webserver is available at: `http://localhost:80`
 - Documentation is available at: `http://localhost:80/docs`
 
 ```sh
->> docker build -t text-classify .      # build image
->> docker run -p 80:80 text-classify    # run container
+>> docker build -t text-classify-image .      # build image
+>> docker run -p 80:80 text-classify-image    # run container
 ```
 
 Use docker-compose:  
@@ -35,14 +33,15 @@ Use docker-compose:
 >> docker-compose down          # stop and remove container
 ```
 
+<!-- > __Note:__ In order to use docker, you need to add `app` in /app/main.py in both `from app.model import ...`   -->
+
 ## Run Application
 
 - The webserver is available at: `http://localhost:8000`  
 - Documentation is available at: `http://localhost:8000/docs`
 
 ```sh
->> cd ./app
->> uvicorn main:app --reload
+>> uvicorn app.main:app --reload
 ```
 
 

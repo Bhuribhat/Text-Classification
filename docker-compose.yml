@@ -5,4 +5,4 @@ services:
     build: .
     ports:
       - 80:80
-    container_name: app-name
+    container_name: text-classify-server
