@@ -41,7 +41,8 @@ Use docker-compose:
 - Documentation is available at: `http://localhost:8000/docs`
 
 ```sh
->> uvicorn app.main:app --reload
+>> cd ./app
+>> uvicorn main:app --reload
 ```
 
 
