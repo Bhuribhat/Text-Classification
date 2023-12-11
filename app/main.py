@@ -1,11 +1,12 @@
+import os
 from pydantic import BaseModel
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from model.detection_model import predict_pipeline
-from model.classify_model import predict_classify
+from app.model.detection_model import predict_pipeline
+from app.model.classify_model import predict_classify
 
 
 class TextIn(BaseModel):
@@ -16,9 +17,11 @@ class PredictionOut(BaseModel):
     language: str
 
 
+ROOT_DIR = os.getcwd()
+
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory=f"{ROOT_DIR}/app/static"), name="static")
+templates = Jinja2Templates(directory=f"{ROOT_DIR}/app/templates")
 
 
 @app.get("/")

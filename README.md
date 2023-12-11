@@ -17,20 +17,20 @@ This web page provides a user-friendly interface for text detection and classifi
 
 ## Create Docker Container
 
-- The webserver is available at: `http://localhost:80`
-- Documentation is available at: `http://localhost:80/docs`
+- The webserver is available at: `http://localhost:8000`
+- Documentation is available at: `http://localhost:8000/docs`
 
 ```sh
->> docker build -t text-classify-image .      # build image
->> docker run -p 80:80 text-classify-image    # run container
+$ docker build -t text-classify-image .            # build image
+$ docker run -p 8000:8000 text-classify-image      # run container
 ```
 
 Use docker-compose:  
 
 ```sh
->> docker-compose up --build    # build image and run container
->> docker-compose up -d         # start and run container
->> docker-compose down          # stop and remove container
+$ docker-compose up --build    # build image and run container
+$ docker-compose up -d         # start and run container
+$ docker-compose down          # stop and remove container
 ```
 
 <!-- > __Note:__ In order to use docker, you need to add `app` in /app/main.py in both `from app.model import ...`   -->
@@ -41,8 +41,7 @@ Use docker-compose:
 - Documentation is available at: `http://localhost:8000/docs`
 
 ```sh
->> cd ./app
->> uvicorn main:app --reload
+$ uvicorn app.main:app --reload
 ```
 
 
